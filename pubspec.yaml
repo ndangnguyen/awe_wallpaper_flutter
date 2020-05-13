@@ -1,0 +1,51 @@
+name: awe_wallpaper
+description: Let pick your wallpaper
+
+publish_to: 'none' # Remove this line if you wish to publish to pub.dev
+
+version: 1.0.0+1
+
+environment:
+  sdk: ">=2.7.0 <3.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  # Dio
+  dio: ^3.0.9
+
+  # Bloc
+  bloc_provider: ^0.7.0
+
+  # Cupertino Icons
+  cupertino_icons: ^0.1.3
+
+  # Equatable
+  equatable: ^1.1.0
+
+  # RxDart
+  rxdart: ^0.23.1
+
+  # GetIt
+  get_it: ^4.0.1
+
+  # Pallet generator
+  palette_generator: ^0.2.2
+
+  #  # Keyboard Visibility
+  #  keyboard_visibility: ^0.5.6
+
+  # Flutter chart
+  fl_chart: ^0.8.7
+
+  # Tiny Color
+  tinycolor: ^1.0.2
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+flutter:
+  uses-material-design: true
