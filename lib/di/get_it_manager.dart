@@ -1,3 +1,4 @@
+import 'package:awe_wallpaper/bloc/home_bloc.dart';
 import 'package:awe_wallpaper/data/remote/api_service.dart';
 import 'package:awe_wallpaper/data/remote/middleware/logging_interceptor.dart';
 import 'package:awe_wallpaper/data/remote/middleware/main_interceptor.dart';
@@ -20,6 +21,7 @@ class GetItManager {
     getIt.registerLazySingleton<Dio>(() => provideDio());
     getIt.registerLazySingleton<ApiService>(() => provideApiService(get<Dio>()));
     getIt.registerLazySingleton<Repository>(() => provideRepository(get<ApiService>()));
+    getIt.registerLazySingleton<HomeBloc>(() => HomeBloc(get<Repository>()));
   }
 
   Dio provideDio() {

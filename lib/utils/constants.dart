@@ -1,10 +1,8 @@
 class Constants {
   static const HTTP_CONNECT_TIME_OUT = 5000;
   static const HTTP_RECEIVE_TIME_OUT = 5000;
-  static const BASE_URL = 'https://covid-193.p.rapidapi.com/';
-  static const RAPID_KEY_HEADER = 'x-rapidapi-key';
-  static const RAPID_KEY_VALUE = '303c1d7c12mshf74c4b5427cc696p19290fjsnec2235b7586d';
-//  static const BASE_URL = 'https://api.covid19api.com/' ;
+  static const BASE_URL = 'https://api.unsplash.com/';
+  static const ACCESS_KEY = 'Client-ID 82ddf8556f7d753821dc4afe33cebe3f68f3bffa81e408987f5e6867cfe42911';
 }
 
 class ColorUtils {

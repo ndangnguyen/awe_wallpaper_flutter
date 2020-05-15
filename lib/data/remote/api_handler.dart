@@ -10,9 +10,9 @@ class ApiHandler {
       Response response = await call;
       onSuccess(response.data);
     } catch (error, stacktrace) {
-      onError?.call(handleError(error));
+//      onError?.call(handleError(error));
       print("Exception occurred: $error stackTrace: $stacktrace");
-      print(handleError(error));
+//      print(handleError(error));
     }
   }
 

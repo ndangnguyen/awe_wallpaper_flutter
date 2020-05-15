@@ -1,9 +1,10 @@
+import 'package:awe_wallpaper/data/model/random_response.dart';
 import 'package:dio/dio.dart';
 
 import 'api_handler.dart';
 
 abstract class ApiService {
-  Future<List<String>> getCountries();
+  Future<RandomResponse> getRandomPhoto();
 }
 
 class ApiServiceImpl with ApiHandler implements ApiService {
@@ -12,14 +13,15 @@ class ApiServiceImpl with ApiHandler implements ApiService {
   ApiServiceImpl(this._dio);
 
   @override
-  Future<List<String>> getCountries() async {
-    List<String> countries = [];
+  Future<RandomResponse> getRandomPhoto() async {
+    RandomResponse randomPicture;
     await callApi(
-      call: _dio.get('countries'),
+      call: _dio.get('photos/random'),
       onSuccess: (response) {
+        randomPicture = RandomResponse.fromJson(response);
       },
       onError: (error) => {},
     );
-    return countries;
+    return randomPicture;
   }
 }

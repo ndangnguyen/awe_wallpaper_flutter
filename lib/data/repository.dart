@@ -1,7 +1,8 @@
+import 'package:awe_wallpaper/data/model/random_response.dart';
 import 'package:awe_wallpaper/data/remote/api_service.dart';
 
 abstract class Repository {
-  Future<List<String>> getCountries();
+  Future<RandomResponse> getRandomPhoto();
 }
 
 class RepositoryImpl implements Repository {
@@ -10,7 +11,7 @@ class RepositoryImpl implements Repository {
   RepositoryImpl(this._apiService);
 
   @override
-  Future<List<String>> getCountries() {
-    return _apiService.getCountries();
+  Future<RandomResponse> getRandomPhoto() {
+    return _apiService.getRandomPhoto();
   }
 }
