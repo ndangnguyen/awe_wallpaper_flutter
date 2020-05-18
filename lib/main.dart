@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'di/get_it_manager.dart';
 
 void main() {
-  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.white, statusBarIconBrightness: Brightness.dark, statusBarBrightness: Brightness.dark));
+  SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(statusBarColor: Colors.black, statusBarIconBrightness: Brightness.light, statusBarBrightness: Brightness.light));
   GetItManager().register();
   runApp(MyApp());
 }

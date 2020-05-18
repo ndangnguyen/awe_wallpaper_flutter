@@ -1,7 +1,3 @@
-// To parse this JSON data, do
-//
-//     final randomResponse = randomResponseFromJson(jsonString);
-
 import 'dart:convert';
 
 class RandomResponse {
